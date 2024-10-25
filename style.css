@@ -1,0 +1,72 @@
+#slider {
+    
+    position:relative;
+    border:20px solid black;
+    width:100%;  // 이미지 보여지는 뷰 부분
+    height:200px;
+ }
+.image-box{
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px; 
+    width: 100%; 
+    border: 1px solid #ccc;
+    animation: bannermove 20s linear infinite;
+}
+
+@keyframes bannermove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-50%, 0);
+    }
+  }
+
+
+
+.image-box img {
+    width: 100%; 
+    height: 500px; 
+}
+
+.kinds{           /* 리스트 */
+    color: white;
+    font-size: 22px;
+    font-weight: bolder;
+    text-decoration: none;
+} 
+body{
+    margin: 0;
+}
+
+section{
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/9737377e-a430-4d13-ad6c-874c54837c49/945eec79-6856-4d95-b4c6-83ff5292f33d/KR-ko-20220111-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+}
+
+section:before{
+    content:'';
+    background: linear-gradient(to left, black, transparent);
+    position: absolute;
+    right:0;
+    height:100%;
+    width: 30%;
+}
+h3{              /*    장르선택 */
+    color: white;
+    font-family: sans-serif;
+
+}
+
+span{          /*  -영화제목을 검색하시오- */
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bolder;
+    color: white;
+}
+
+h4{
+    font-size: 30px;
+}
